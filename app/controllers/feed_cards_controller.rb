@@ -17,9 +17,10 @@ class FeedCardsController < ApplicationController
   # POST /feed_cards
   def create
     @feed_card = FeedCard.new(feed_card_params)
+    puts params
 
     if @feed_card.save
-      render json: @feed_card, status: :created, location: @feed_card
+      render json: @feed_card, status: :created
     else
       render json: @feed_card.errors, status: :unprocessable_entity
     end
@@ -47,6 +48,6 @@ class FeedCardsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def feed_card_params
-      params.require(:feed_card).permit(:img, :title, :content, :subscribed, :likes)
+      params.require(:feed_card).permit(:img, :title, :content, :subscribed, :likes, :user_id)
     end
 end
