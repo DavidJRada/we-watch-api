@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'welcome#index'
+  
   scope '/api' do
     resources :feed_cards
     post 'user_token' => 'user_token#create'
