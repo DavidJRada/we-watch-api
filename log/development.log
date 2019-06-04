@@ -3206,3 +3206,2491 @@ Processing by FeedCardsController#create as */*
 Completed 201 Created in 71ms (Views: 1.2ms | ActiveRecord: 11.5ms)
 
 
+Started POST "/api/user_token" for ::1 at 2019-06-03 18:14:57 -0400
+Started GET "/api/feed_cards" for ::1 at 2019-06-03 18:14:57 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}, "user_token"=>{"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "david@wewatch.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 201 Created in 66ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 18:16:01 -0400
+Started GET "/api/feed_cards" for ::1 at 2019-06-03 18:16:01 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}, "user_token"=>{"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "david@wewatch.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 201 Created in 81ms (Views: 0.2ms | ActiveRecord: 5.9ms)
+
+
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 40ms (Views: 7.5ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/api/feed_cards" for ::1 at 2019-06-03 18:28:22 -0400
+Processing by FeedCardsController#create as */*
+  Parameters: {"feed_card"=>{"img"=>"1234", "title"=>"123", "content"=>"123", "likes"=>"123", "user_id"=>"3"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:22
+  [1m[35m (3.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/feed_cards_controller.rb:22
+Completed 422 Unprocessable Entity in 17ms (Views: 0.8ms | ActiveRecord: 6.2ms)
+
+
+Started POST "/api/feed_cards" for ::1 at 2019-06-03 18:28:32 -0400
+Processing by FeedCardsController#create as */*
+  Parameters: {"feed_card"=>{"img"=>"1234", "title"=>"123", "content"=>"123", "likes"=>"123", "user_id"=>"3"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:22
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:22
+  [1m[36mFeedCard Create (0.6ms)[0m  [1m[32mINSERT INTO "feed_cards" ("img", "title", "content", "likes", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["img", "1234"], ["title", "123"], ["content", "123"], ["likes", 123], ["created_at", "2019-06-03 22:28:32.912930"], ["updated_at", "2019-06-03 22:28:32.912930"], ["user_id", 3]]
+  ↳ app/controllers/feed_cards_controller.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:22
+Completed 201 Created in 50ms (Views: 0.3ms | ActiveRecord: 15.9ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 18:28:41 -0400
+Started GET "/api/feed_cards" for ::1 at 2019-06-03 18:28:41 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"3", "password"=>"[FILTERED]", "username"=>"3"}, "user_token"=>{"auth"=>{"email"=>"3", "password"=>"[FILTERED]", "username"=>"3"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "3"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 404 Not Found in 68ms (ActiveRecord: 0.2ms)
+
+
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.5ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 18:32:08 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"3", "password"=>"[FILTERED]", "username"=>"3"}, "user_token"=>{"auth"=>{"email"=>"3", "password"=>"[FILTERED]", "username"=>"3"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "3"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 404 Not Found in 70ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-03 18:32:08 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.2ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 18:33:08 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"3", "password"=>"[FILTERED]", "username"=>"3"}, "user_token"=>{"auth"=>{"email"=>"3", "password"=>"[FILTERED]", "username"=>"3"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "3"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 404 Not Found in 81ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-03 18:33:08 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.5ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/api/feed_cards" for ::1 at 2019-06-03 18:35:18 -0400
+Processing by FeedCardsController#create as */*
+  Parameters: {"feed_card"=>{"img"=>"asd", "title"=>"asd", "content"=>"asd", "likes"=>"asd", "user_id"=>"3"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:22
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:22
+  [1m[36mFeedCard Create (1.4ms)[0m  [1m[32mINSERT INTO "feed_cards" ("img", "title", "content", "likes", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["img", "asd"], ["title", "asd"], ["content", "asd"], ["likes", 0], ["created_at", "2019-06-03 22:35:18.230293"], ["updated_at", "2019-06-03 22:35:18.230293"], ["user_id", 3]]
+  ↳ app/controllers/feed_cards_controller.rb:22
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:22
+Completed 201 Created in 14ms (Views: 1.1ms | ActiveRecord: 5.3ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 18:37:26 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"3", "password"=>"[FILTERED]", "username"=>"3"}, "user_token"=>{"auth"=>{"email"=>"3", "password"=>"[FILTERED]", "username"=>"3"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "3"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 404 Not Found in 69ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-03 18:37:26 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 18:43:30 -0400
+Started GET "/api/feed_cards" for ::1 at 2019-06-03 18:43:30 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"3", "password"=>"[FILTERED]", "username"=>"3"}, "user_token"=>{"auth"=>{"email"=>"3", "password"=>"[FILTERED]", "username"=>"3"}}}
+Unpermitted parameter: :username
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "3"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 404 Not Found in 69ms (ActiveRecord: 1.3ms)
+
+
+  [1m[36mUser Load (66.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.7ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 71ms (Views: 2.6ms | ActiveRecord: 67.0ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 18:49:00 -0400
+Started GET "/api/feed_cards" for ::1 at 2019-06-03 18:49:00 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"3", "password"=>"[FILTERED]", "username"=>"3"}, "user_token"=>{"auth"=>{"email"=>"3", "password"=>"[FILTERED]", "username"=>"3"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "3"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 404 Not Found in 68ms (ActiveRecord: 1.5ms)
+
+
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 18:49:15 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"3", "password"=>"[FILTERED]", "username"=>"3"}, "user_token"=>{"auth"=>{"email"=>"3", "password"=>"[FILTERED]", "username"=>"3"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "3"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 404 Not Found in 69ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-03 18:49:15 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 6ms (Views: 2.0ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 18:50:51 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"3", "password"=>"[FILTERED]", "username"=>"3"}, "user_token"=>{"auth"=>{"email"=>"3", "password"=>"[FILTERED]", "username"=>"3"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "3"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 404 Not Found in 67ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-03 18:50:51 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.5ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 6ms (Views: 2.7ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/api/feed_cards" for ::1 at 2019-06-03 18:51:17 -0400
+Processing by FeedCardsController#create as */*
+  Parameters: {"feed_card"=>{"img"=>"asdasasddsf", "title"=>"asdsdfdsf", "content"=>"asddsfdf", "likes"=>"dsf"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:22
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/feed_cards_controller.rb:22
+Completed 422 Unprocessable Entity in 9ms (Views: 0.4ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 18:52:01 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"3", "password"=>"[FILTERED]", "username"=>"3"}, "user_token"=>{"auth"=>{"email"=>"3", "password"=>"[FILTERED]", "username"=>"3"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "3"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 404 Not Found in 67ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-03 18:52:01 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.2ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/feed_cards" for ::1 at 2019-06-03 18:52:40 -0400
+Processing by FeedCardsController#create as */*
+  Parameters: {"feed_card"=>{"img"=>"asdasasddsf", "title"=>"asdsdfdsf", "content"=>"asddsfdf", "likes"=>"dsf", "user_id"=>"\"3\""}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (2.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:22
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:22
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/feed_cards_controller.rb:22
+Completed 422 Unprocessable Entity in 11ms (Views: 0.2ms | ActiveRecord: 4.3ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 18:54:18 -0400
+Started GET "/api/feed_cards" for ::1 at 2019-06-03 18:54:18 -0400
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by FeedCardsController#index as */*
+  [1m[35m (13.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"3", "password"=>"[FILTERED]", "username"=>"3"}, "user_token"=>{"auth"=>{"email"=>"3", "password"=>"[FILTERED]", "username"=>"3"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "3"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 404 Not Found in 86ms (ActiveRecord: 6.9ms)
+
+
+  [1m[36mFeedCard Load (0.5ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 135ms (Views: 10.0ms | ActiveRecord: 9.4ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 18:56:17 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"3", "password"=>"[FILTERED]", "username"=>"3"}, "user_token"=>{"auth"=>{"email"=>"3", "password"=>"[FILTERED]", "username"=>"3"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "3"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 404 Not Found in 71ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-03 18:56:17 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.5ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 18:58:03 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"3", "password"=>"[FILTERED]", "username"=>"3"}, "user_token"=>{"auth"=>{"email"=>"3", "password"=>"[FILTERED]", "username"=>"3"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "3"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 404 Not Found in 67ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-03 18:58:03 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 18:59:30 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"2", "password"=>"[FILTERED]", "username"=>"2"}, "user_token"=>{"auth"=>{"email"=>"2", "password"=>"[FILTERED]", "username"=>"2"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "2"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-03 18:59:30 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 18:59:40 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"", "password"=>"[FILTERED]", "username"=>""}, "user_token"=>{"auth"=>{"email"=>"", "password"=>"[FILTERED]", "username"=>""}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.6ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 18:59:44 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}, "user_token"=>{"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "s"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-03 18:59:44 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (1.0ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 6ms (Views: 2.6ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 19:00:26 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}, "user_token"=>{"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "s"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-03 19:00:26 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 19:02:04 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"w", "password"=>"[FILTERED]", "username"=>"w"}, "user_token"=>{"auth"=>{"email"=>"w", "password"=>"[FILTERED]", "username"=>"w"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "w"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-03 19:02:04 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 19:02:42 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"davidr132@gmail.com", "password"=>"[FILTERED]", "username"=>"w"}, "user_token"=>{"auth"=>{"email"=>"davidr132@gmail.com", "password"=>"[FILTERED]", "username"=>"w"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "davidr132@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-03 19:02:42 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 19:03:03 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"w", "password"=>"[FILTERED]", "username"=>"w"}, "user_token"=>{"auth"=>{"email"=>"w", "password"=>"[FILTERED]", "username"=>"w"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "w"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-03 19:03:03 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 6ms (Views: 2.8ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 19:03:50 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"n", "password"=>"[FILTERED]", "username"=>""}, "user_token"=>{"auth"=>{"email"=>"n", "password"=>"[FILTERED]", "username"=>""}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "n"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 19:03:54 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"n", "password"=>"[FILTERED]", "username"=>"j"}, "user_token"=>{"auth"=>{"email"=>"n", "password"=>"[FILTERED]", "username"=>"j"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "n"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-03 19:03:54 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 19:46:09 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"2", "password"=>"[FILTERED]", "username"=>"2"}, "user_token"=>{"auth"=>{"email"=>"2", "password"=>"[FILTERED]", "username"=>"2"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "2"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 4ms (ActiveRecord: 1.2ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 19:46:32 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"davidr132@gmail.com", "password"=>"[FILTERED]", "username"=>"3"}, "user_token"=>{"auth"=>{"email"=>"davidr132@gmail.com", "password"=>"[FILTERED]", "username"=>"3"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "davidr132@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-03 19:46:32 -0400
+Processing by FeedCardsController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 19:46:42 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"3", "password"=>"[FILTERED]", "username"=>"3"}, "user_token"=>{"auth"=>{"email"=>"3", "password"=>"[FILTERED]", "username"=>"3"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "3"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 404 Not Found in 67ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-03 19:46:42 -0400
+Processing by FeedCardsController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 19:47:09 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"3", "password"=>"[FILTERED]", "username"=>"3"}, "user_token"=>{"auth"=>{"email"=>"3", "password"=>"[FILTERED]", "username"=>"3"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "3"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 404 Not Found in 64ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-03 19:47:09 -0400
+Processing by FeedCardsController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 19:47:22 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}, "user_token"=>{"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "david@wewatch.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 201 Created in 67ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-03 19:47:22 -0400
+Processing by FeedCardsController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 19:47:38 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"", "password"=>"[FILTERED]", "username"=>""}, "user_token"=>{"auth"=>{"email"=>"", "password"=>"[FILTERED]", "username"=>""}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 1ms (ActiveRecord: 0.3ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 19:47:40 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"c", "password"=>"[FILTERED]", "username"=>"c"}, "user_token"=>{"auth"=>{"email"=>"c", "password"=>"[FILTERED]", "username"=>"c"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "c"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-03 19:47:40 -0400
+Processing by FeedCardsController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 19:48:12 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"", "password"=>"[FILTERED]", "username"=>""}, "user_token"=>{"auth"=>{"email"=>"", "password"=>"[FILTERED]", "username"=>""}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 19:48:14 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>""}, "user_token"=>{"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>""}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "s"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 3ms (ActiveRecord: 1.2ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 19:48:16 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}, "user_token"=>{"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "s"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-03 19:48:16 -0400
+Processing by FeedCardsController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 19:48:29 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"3", "password"=>"[FILTERED]", "username"=>"1"}, "user_token"=>{"auth"=>{"email"=>"3", "password"=>"[FILTERED]", "username"=>"1"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "3"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 404 Not Found in 67ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-03 19:48:29 -0400
+Processing by FeedCardsController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 19:49:13 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"3", "password"=>"[FILTERED]", "username"=>"1"}, "user_token"=>{"auth"=>{"email"=>"3", "password"=>"[FILTERED]", "username"=>"1"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "3"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 404 Not Found in 66ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-03 19:49:13 -0400
+Processing by FeedCardsController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 19:49:23 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}, "user_token"=>{"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "david@wewatch.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 201 Created in 66ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-03 19:49:23 -0400
+Processing by FeedCardsController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 19:49:37 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}, "user_token"=>{"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "david@wewatch.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 201 Created in 69ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-03 19:49:37 -0400
+Processing by FeedCardsController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 19:54:28 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"", "password"=>"[FILTERED]", "username"=>""}, "user_token"=>{"auth"=>{"email"=>"", "password"=>"[FILTERED]", "username"=>""}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 19:54:29 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"", "password"=>"[FILTERED]", "username"=>""}, "user_token"=>{"auth"=>{"email"=>"", "password"=>"[FILTERED]", "username"=>""}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 19:54:37 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"", "password"=>"[FILTERED]", "username"=>""}, "user_token"=>{"auth"=>{"email"=>"", "password"=>"[FILTERED]", "username"=>""}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-03 19:54:37 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"", "password"=>"[FILTERED]", "username"=>""}, "user_token"=>{"auth"=>{"email"=>"", "password"=>"[FILTERED]", "username"=>""}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 08:52:48 -0400
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 08:52:49 -0400
+Processing by UserTokenController#create as HTML
+Processing by FeedCardsController#index as */*
+  Parameters: {"auth"=>{"email"=>"davidjrada@gmail.com", "password"=>"[FILTERED]", "username"=>"s"}, "user_token"=>{"auth"=>{"email"=>"davidjrada@gmail.com", "password"=>"[FILTERED]", "username"=>"s"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "davidjrada@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 5ms (ActiveRecord: 0.9ms)
+
+
+  [1m[36mFeedCard Load (1.5ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 16ms (Views: 3.7ms | ActiveRecord: 4.3ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 08:55:04 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"s"}, "user_token"=>{"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"s"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "david@wewatch.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 404 Not Found in 68ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 08:55:04 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 08:58:46 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}, "user_token"=>{"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "s"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 4ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 08:58:46 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 08:59:15 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}, "user_token"=>{"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "s"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 08:59:15 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 09:01:50 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}, "user_token"=>{"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "s"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:01:50 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.5ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 09:02:34 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}, "user_token"=>{"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "s"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:02:34 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 09:03:11 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}, "user_token"=>{"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "s"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:03:11 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 09:05:12 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}, "user_token"=>{"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "s"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:05:12 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 09:05:51 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"davidjrada@gmail.com", "password"=>"[FILTERED]", "username"=>"x"}, "user_token"=>{"auth"=>{"email"=>"davidjrada@gmail.com", "password"=>"[FILTERED]", "username"=>"x"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "davidjrada@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:05:51 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 09:06:20 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}, "user_token"=>{"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "s"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:06:20 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:12:14 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.5ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 09:12:17 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"a", "password"=>"[FILTERED]", "username"=>"a"}, "user_token"=>{"auth"=>{"email"=>"a", "password"=>"[FILTERED]", "username"=>"a"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "a"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:12:48 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:12:53 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 09:13:02 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}, "user_token"=>{"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "s"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:13:41 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:13:43 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 09:13:45 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"w", "password"=>"[FILTERED]", "username"=>"w"}, "user_token"=>{"auth"=>{"email"=>"w", "password"=>"[FILTERED]", "username"=>"w"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "w"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 4ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:13:57 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 09:14:04 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}, "user_token"=>{"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "s"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:15:27 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 09:15:30 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}, "user_token"=>{"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "s"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 3ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:15:37 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 09:15:40 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}, "user_token"=>{"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "s"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:16:07 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 09:16:10 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}, "user_token"=>{"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "s"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:16:23 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:16:27 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 09:16:30 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}, "user_token"=>{"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "s"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:16:37 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:16:53 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 1.5ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 09:16:55 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}, "user_token"=>{"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "s"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started POST "/api/feed_cards" for ::1 at 2019-06-04 09:19:28 -0400
+Processing by FeedCardsController#create as */*
+  Parameters: {"feed_card"=>{"img"=>"THis is test for user 3", "title"=>"videodrome", "content"=>"insdfisdnfiosn", "likes"=>"2", "user_id"=>"3"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:22
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:22
+  [1m[36mFeedCard Create (3.0ms)[0m  [1m[32mINSERT INTO "feed_cards" ("img", "title", "content", "likes", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["img", "THis is test for user 3"], ["title", "videodrome"], ["content", "insdfisdnfiosn"], ["likes", 2], ["created_at", "2019-06-04 13:19:28.353627"], ["updated_at", "2019-06-04 13:19:28.353627"], ["user_id", 3]]
+  ↳ app/controllers/feed_cards_controller.rb:22
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:22
+Completed 201 Created in 31ms (Views: 0.4ms | ActiveRecord: 4.9ms)
+
+
+Started POST "/api/feed_cards" for ::1 at 2019-06-04 09:19:39 -0400
+Processing by FeedCardsController#create as */*
+  Parameters: {"feed_card"=>{"img"=>"THis is test for user 3", "title"=>"videodrome", "content"=>"insdfisdnfiosn", "likes"=>"2"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:22
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/feed_cards_controller.rb:22
+Completed 422 Unprocessable Entity in 17ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/api/feed_cards" for ::1 at 2019-06-04 09:19:56 -0400
+Processing by FeedCardsController#create as */*
+  Parameters: {"feed_card"=>{"likes"=>"2", "user_id"=>"3"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:22
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:22
+  [1m[36mFeedCard Create (3.5ms)[0m  [1m[32mINSERT INTO "feed_cards" ("likes", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["likes", 2], ["created_at", "2019-06-04 13:19:56.321959"], ["updated_at", "2019-06-04 13:19:56.321959"], ["user_id", 3]]
+  ↳ app/controllers/feed_cards_controller.rb:22
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:22
+Completed 201 Created in 14ms (Views: 0.5ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:23:09 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 09:23:12 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}, "user_token"=>{"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "s"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:36:50 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.6ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 6ms (Views: 2.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:36:56 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 09:37:02 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}, "user_token"=>{"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "s"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:39:13 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:39:16 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.7ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:39:18 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.5ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 6ms (Views: 2.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:39:19 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 09:39:22 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}, "user_token"=>{"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "s"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:39:30 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 09:39:33 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"a", "password"=>"[FILTERED]", "username"=>"a"}, "user_token"=>{"auth"=>{"email"=>"a", "password"=>"[FILTERED]", "username"=>"a"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "a"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:40:11 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:40:12 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 09:40:14 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}, "user_token"=>{"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "s"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:40:24 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 09:40:27 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}, "user_token"=>{"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "s"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:41:30 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 09:41:33 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}, "user_token"=>{"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "s"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:45:21 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.6ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 09:45:29 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"admin@weWatch.com", "password"=>"[FILTERED]", "username"=>"a"}, "user_token"=>{"auth"=>{"email"=>"admin@weWatch.com", "password"=>"[FILTERED]", "username"=>"a"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@weWatch.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:46:13 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.7ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 09:46:16 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}, "user_token"=>{"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "s"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:47:02 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 7ms (Views: 2.4ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 09:47:05 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}, "user_token"=>{"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "s"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:47:37 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 09:47:40 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}, "user_token"=>{"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "s"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:48:35 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 09:48:41 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}, "user_token"=>{"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "s"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started POST "/api/feed_cards" for ::1 at 2019-06-04 09:48:43 -0400
+Processing by FeedCardsController#create as HTML
+  Parameters: {"img"=>"", "title"=>"", "content"=>"", "subscribed"=>false, "likes"=>0, "user_id"=>2, "feed_card"=>{"img"=>"", "title"=>"", "content"=>"", "subscribed"=>false, "likes"=>0, "user_id"=>2}}
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:48:57 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:49:26 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 6ms (Views: 2.7ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 09:49:29 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}, "user_token"=>{"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "s"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:49:45 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 09:49:48 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"a", "password"=>"[FILTERED]", "username"=>"a"}, "user_token"=>{"auth"=>{"email"=>"a", "password"=>"[FILTERED]", "username"=>"a"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "a"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:52:57 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.8ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 09:52:59 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}, "user_token"=>{"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "s"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:53:09 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 09:53:13 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"2", "password"=>"[FILTERED]", "username"=>"2"}, "user_token"=>{"auth"=>{"email"=>"2", "password"=>"[FILTERED]", "username"=>"2"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "2"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:53:32 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 09:53:35 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"2", "password"=>"[FILTERED]", "username"=>"2"}, "user_token"=>{"auth"=>{"email"=>"2", "password"=>"[FILTERED]", "username"=>"2"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "2"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 5ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:53:45 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 09:53:48 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}, "user_token"=>{"auth"=>{"email"=>"s", "password"=>"[FILTERED]", "username"=>"s"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "s"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:54:29 -0400
+Processing by FeedCardsController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 09:54:32 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"davidjrada@gmail.com", "password"=>"[FILTERED]", "username"=>"a"}, "user_token"=>{"auth"=>{"email"=>"davidjrada@gmail.com", "password"=>"[FILTERED]", "username"=>"a"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "davidjrada@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:54:37 -0400
+Processing by FeedCardsController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 09:54:40 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"a", "password"=>"[FILTERED]", "username"=>"a"}, "user_token"=>{"auth"=>{"email"=>"a", "password"=>"[FILTERED]", "username"=>"a"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "a"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:56:12 -0400
+Processing by FeedCardsController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:56:23 -0400
+Processing by FeedCardsController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:56:25 -0400
+Processing by FeedCardsController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:56:30 -0400
+Processing by FeedCardsController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:56:53 -0400
+Processing by FeedCardsController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:57:31 -0400
+Processing by FeedCardsController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:57:54 -0400
+Processing by FeedCardsController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:58:02 -0400
+Processing by FeedCardsController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:58:39 -0400
+Processing by FeedCardsController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 09:58:58 -0400
+Processing by FeedCardsController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 10:11:54 -0400
+Processing by FeedCardsController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 10:12:01 -0400
+Processing by FeedCardsController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 10:12:10 -0400
+Processing by FeedCardsController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 10:12:13 -0400
+Processing by FeedCardsController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 10:12:24 -0400
+Processing by FeedCardsController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 10:12:46 -0400
+Processing by FeedCardsController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 10:12:50 -0400
+Processing by FeedCardsController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 10:12:53 -0400
+Processing by FeedCardsController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 10:12:56 -0400
+Processing by FeedCardsController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 10:49:33 -0400
+Processing by FeedCardsController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 10:49:38 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"3", "password"=>"[FILTERED]", "username"=>"3"}, "user_token"=>{"auth"=>{"email"=>"3", "password"=>"[FILTERED]", "username"=>"3"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "3"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 404 Not Found in 64ms (ActiveRecord: 0.6ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 10:49:48 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}, "user_token"=>{"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "david@wewatch.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 201 Created in 74ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 10:50:17 -0400
+Processing by FeedCardsController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 10:50:23 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"davidr132@gmail.com", "password"=>"[FILTERED]", "username"=>"444"}, "user_token"=>{"auth"=>{"email"=>"davidr132@gmail.com", "password"=>"[FILTERED]", "username"=>"444"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "davidr132@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 10:50:24 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"davidr132@gmail.com", "password"=>"[FILTERED]", "username"=>"444"}, "user_token"=>{"auth"=>{"email"=>"davidr132@gmail.com", "password"=>"[FILTERED]", "username"=>"444"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "davidr132@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 1ms (ActiveRecord: 0.3ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 10:50:24 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"davidr132@gmail.com", "password"=>"[FILTERED]", "username"=>"444"}, "user_token"=>{"auth"=>{"email"=>"davidr132@gmail.com", "password"=>"[FILTERED]", "username"=>"444"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "davidr132@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 1ms (ActiveRecord: 0.3ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 10:50:24 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"davidr132@gmail.com", "password"=>"[FILTERED]", "username"=>"444"}, "user_token"=>{"auth"=>{"email"=>"davidr132@gmail.com", "password"=>"[FILTERED]", "username"=>"444"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "davidr132@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 10:50:25 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"davidr132@gmail.com", "password"=>"[FILTERED]", "username"=>"444"}, "user_token"=>{"auth"=>{"email"=>"davidr132@gmail.com", "password"=>"[FILTERED]", "username"=>"444"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "davidr132@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 10:50:25 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"davidr132@gmail.com", "password"=>"[FILTERED]", "username"=>"444"}, "user_token"=>{"auth"=>{"email"=>"davidr132@gmail.com", "password"=>"[FILTERED]", "username"=>"444"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "davidr132@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 10:50:25 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"davidr132@gmail.com", "password"=>"[FILTERED]", "username"=>"444"}, "user_token"=>{"auth"=>{"email"=>"davidr132@gmail.com", "password"=>"[FILTERED]", "username"=>"444"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "davidr132@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 10:50:25 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"davidr132@gmail.com", "password"=>"[FILTERED]", "username"=>"444"}, "user_token"=>{"auth"=>{"email"=>"davidr132@gmail.com", "password"=>"[FILTERED]", "username"=>"444"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "davidr132@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 10:50:25 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"davidr132@gmail.com", "password"=>"[FILTERED]", "username"=>"444"}, "user_token"=>{"auth"=>{"email"=>"davidr132@gmail.com", "password"=>"[FILTERED]", "username"=>"444"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "davidr132@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 10:50:34 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}, "user_token"=>{"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "david@wewatch.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 201 Created in 65ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 10:50:36 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (1.2ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 7ms (Views: 3.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 10:50:36 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.7ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 10:50:37 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 10:50:39 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"", "password"=>"[FILTERED]", "username"=>""}, "user_token"=>{"auth"=>{"email"=>"", "password"=>"[FILTERED]", "username"=>""}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 10:50:48 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}, "user_token"=>{"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "david@wewatch.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 201 Created in 65ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 10:52:09 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 10:52:13 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"3", "password"=>"[FILTERED]", "username"=>"3"}, "user_token"=>{"auth"=>{"email"=>"3", "password"=>"[FILTERED]", "username"=>"3"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "3"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 404 Not Found in 65ms (ActiveRecord: 0.2ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 10:52:21 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}, "user_token"=>{"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "david@wewatch.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 201 Created in 65ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 10:59:47 -0400
+Processing by FeedCardsController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 10:59:53 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}, "user_token"=>{"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "david@wewatch.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 201 Created in 66ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 10:59:59 -0400
+Processing by FeedCardsController#index as */*
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 11:00:04 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}, "user_token"=>{"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "david@wewatch.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 201 Created in 66ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:01:59 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.6ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:02:02 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.8ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 11ms (Views: 2.8ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:02:04 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 11:02:11 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}, "user_token"=>{"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "david@wewatch.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 201 Created in 65ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:02:38 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 11:02:43 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}, "user_token"=>{"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "david@wewatch.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 201 Created in 66ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:03:13 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 11:03:19 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}, "user_token"=>{"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "david@wewatch.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 201 Created in 66ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:03:43 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:05:44 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (1.2ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 7ms (Views: 2.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:07:10 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:07:11 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (4.1ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 13ms (Views: 4.8ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:07:20 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 11:07:24 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}, "user_token"=>{"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "david@wewatch.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 201 Created in 68ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:10:07 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:10:22 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:10:25 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (2.5ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 12ms (Views: 3.0ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:10:33 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 11:10:38 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}, "user_token"=>{"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "david@wewatch.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 201 Created in 64ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:10:45 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.7ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:10:52 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.5ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 11:10:56 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}, "user_token"=>{"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "david@wewatch.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 201 Created in 65ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:13:27 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:13:31 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 11:13:36 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}, "user_token"=>{"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "david@wewatch.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 201 Created in 65ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:16:01 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 11:16:06 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}, "user_token"=>{"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "david@wewatch.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 201 Created in 65ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:16:29 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 11:16:35 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}, "user_token"=>{"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "david@wewatch.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 201 Created in 65ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:17:03 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.5ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:17:09 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:17:12 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 11:17:18 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}, "user_token"=>{"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "david@wewatch.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 201 Created in 65ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:19:28 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.5ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 53ms (Views: 12.4ms | ActiveRecord: 12.3ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 11:19:32 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}, "user_token"=>{"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "david@wewatch.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 201 Created in 67ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:20:20 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (1.0ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:20:58 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:21:06 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 11:21:10 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}, "user_token"=>{"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "david@wewatch.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 201 Created in 66ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/feed_cards" for ::1 at 2019-06-04 11:21:14 -0400
+Processing by FeedCardsController#create as HTML
+  Parameters: {"img"=>"", "title"=>"", "content"=>"", "subscribed"=>false, "likes"=>0, "user_id"=>2, "feed_card"=>{"img"=>"", "title"=>"", "content"=>"", "subscribed"=>false, "likes"=>0, "user_id"=>2}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:23
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:23
+  [1m[36mFeedCard Create (0.6ms)[0m  [1m[32mINSERT INTO "feed_cards" ("img", "title", "content", "likes", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["img", ""], ["title", ""], ["content", ""], ["likes", 0], ["created_at", "2019-06-04 15:21:14.043967"], ["updated_at", "2019-06-04 15:21:14.043967"], ["user_id", 2]]
+  ↳ app/controllers/feed_cards_controller.rb:23
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:23
+Completed 201 Created in 27ms (Views: 0.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:21:22 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.9ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 8ms (Views: 2.9ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 11:21:28 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"dav"}, "user_token"=>{"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"dav"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "david@wewatch.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 201 Created in 66ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/feed_cards" for ::1 at 2019-06-04 11:21:43 -0400
+Processing by FeedCardsController#create as HTML
+  Parameters: {"img"=>"teserrrrr", "title"=>"asdasd", "content"=>"asd", "subscribed"=>false, "likes"=>0, "user_id"=>2, "feed_card"=>{"img"=>"teserrrrr", "title"=>"asdasd", "content"=>"asd", "subscribed"=>false, "likes"=>0, "user_id"=>2}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:23
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:23
+  [1m[36mFeedCard Create (0.7ms)[0m  [1m[32mINSERT INTO "feed_cards" ("img", "title", "content", "likes", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["img", "teserrrrr"], ["title", "asdasd"], ["content", "asd"], ["likes", 0], ["created_at", "2019-06-04 15:21:43.664896"], ["updated_at", "2019-06-04 15:21:43.664896"], ["user_id", 2]]
+  ↳ app/controllers/feed_cards_controller.rb:23
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:23
+Completed 201 Created in 10ms (Views: 0.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:22:17 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:22:19 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:22:27 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:23:01 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:23:04 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 22ms (Views: 19.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 11:23:12 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}, "user_token"=>{"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "david@wewatch.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 201 Created in 67ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:26:40 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:27:04 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:27:08 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:27:11 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:27:12 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 11:27:19 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}, "user_token"=>{"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "david@wewatch.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 201 Created in 66ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/feed_cards" for ::1 at 2019-06-04 11:27:22 -0400
+Processing by FeedCardsController#create as HTML
+  Parameters: {"img"=>"", "title"=>"", "content"=>"", "subscribed"=>false, "likes"=>0, "user_id"=>2, "feed_card"=>{"img"=>"", "title"=>"", "content"=>"", "subscribed"=>false, "likes"=>0, "user_id"=>2}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:23
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:23
+  [1m[36mFeedCard Create (0.4ms)[0m  [1m[32mINSERT INTO "feed_cards" ("img", "title", "content", "likes", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["img", ""], ["title", ""], ["content", ""], ["likes", 0], ["created_at", "2019-06-04 15:27:22.657416"], ["updated_at", "2019-06-04 15:27:22.657416"], ["user_id", 2]]
+  ↳ app/controllers/feed_cards_controller.rb:23
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:23
+Completed 201 Created in 8ms (Views: 1.7ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/api/feed_cards" for ::1 at 2019-06-04 11:27:29 -0400
+Processing by FeedCardsController#create as HTML
+  Parameters: {"img"=>"sadasd", "title"=>"cxzcz", "content"=>"xzczx", "subscribed"=>false, "likes"=>0, "user_id"=>2, "feed_card"=>{"img"=>"sadasd", "title"=>"cxzcz", "content"=>"xzczx", "subscribed"=>false, "likes"=>0, "user_id"=>2}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:23
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:23
+  [1m[36mFeedCard Create (0.7ms)[0m  [1m[32mINSERT INTO "feed_cards" ("img", "title", "content", "likes", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["img", "sadasd"], ["title", "cxzcz"], ["content", "xzczx"], ["likes", 0], ["created_at", "2019-06-04 15:27:30.003431"], ["updated_at", "2019-06-04 15:27:30.003431"], ["user_id", 2]]
+  ↳ app/controllers/feed_cards_controller.rb:23
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:23
+Completed 201 Created in 8ms (Views: 0.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/feed_cards" for ::1 at 2019-06-04 11:27:47 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 95ms (Views: 3.6ms | ActiveRecord: 12.6ms)
+
+
+Started POST "/api/user_token" for ::1 at 2019-06-04 11:27:52 -0400
+Processing by UserTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}, "user_token"=>{"auth"=>{"email"=>"david@wewatch.com", "password"=>"[FILTERED]", "username"=>"david"}}}
+Unpermitted parameter: :username
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "david@wewatch.com"], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :username
+Completed 201 Created in 64ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/feed_cards" for ::1 at 2019-06-04 11:28:03 -0400
+Processing by FeedCardsController#create as HTML
+  Parameters: {"img"=>"dasdas", "title"=>"asdasdas", "content"=>"dd", "subscribed"=>false, "likes"=>0, "user_id"=>3, "feed_card"=>{"img"=>"dasdas", "title"=>"asdasdas", "content"=>"dd", "subscribed"=>false, "likes"=>0, "user_id"=>3}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:23
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:23
+  [1m[36mFeedCard Create (0.8ms)[0m  [1m[32mINSERT INTO "feed_cards" ("img", "title", "content", "likes", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["img", "dasdas"], ["title", "asdasdas"], ["content", "dd"], ["likes", 0], ["created_at", "2019-06-04 15:28:03.185580"], ["updated_at", "2019-06-04 15:28:03.185580"], ["user_id", 3]]
+  ↳ app/controllers/feed_cards_controller.rb:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:23
+Completed 201 Created in 11ms (Views: 0.5ms | ActiveRecord: 2.3ms)
+
+

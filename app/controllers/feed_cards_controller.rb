@@ -4,7 +4,7 @@ class FeedCardsController < ApplicationController
 
   # GET /feed_cards
   def index
-    @feed_cards = FeedCard.all
+    @feed_cards = FeedCard.all.reverse
 
     render json: @feed_cards
   end
@@ -16,8 +16,9 @@ class FeedCardsController < ApplicationController
 
   # POST /feed_cards
   def create
+    puts feed_card_params
     @feed_card = FeedCard.new(feed_card_params)
-    puts params
+    # @feed_card.user_id = params[:user_id]
 
     if @feed_card.save
       render json: @feed_card, status: :created
