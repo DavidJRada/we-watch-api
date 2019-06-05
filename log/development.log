@@ -28065,3 +28065,2094 @@ Processing by FeedCardsController#index as */*
 Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 0.9ms)
 
 
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:12:47 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/feed_cards/14" for ::1 at 2019-06-05 14:12:50 -0400
+Processing by FeedCardsController#destroy as HTML
+  Parameters: {"id"=>"14", "feed_card"=>{}}
+  [1m[36mFeedCard Load (0.6ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:43
+  [1m[36mFeedCard Destroy (0.3ms)[0m  [1m[31mDELETE FROM "feed_cards" WHERE "feed_cards"."id" = $1[0m  [["id", 14]]
+  ↳ app/controllers/feed_cards_controller.rb:43
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:43
+Completed 204 No Content in 4ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:13:36 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/feed_cards" for ::1 at 2019-06-05 14:13:39 -0400
+Processing by FeedCardsController#create as HTML
+  Parameters: {"img"=>"", "title"=>"", "content"=>"", "subscribed"=>false, "likes"=>0, "user"=>"123", "user_id"=>1, "feed_card"=>{"img"=>"", "title"=>"", "content"=>"", "subscribed"=>false, "likes"=>0, "user_id"=>1, "user"=>"123"}}
+Unpermitted parameter: :user
+Unpermitted parameter: :user
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[36mFeedCard Create (0.4ms)[0m  [1m[32mINSERT INTO "feed_cards" ("img", "title", "content", "likes", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["img", ""], ["title", ""], ["content", ""], ["likes", 0], ["created_at", "2019-06-05 18:13:39.751766"], ["updated_at", "2019-06-05 18:13:39.751766"], ["user_id", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:25
+Completed 201 Created in 6ms (Views: 0.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:13:48 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:13:49 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:13:57 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.2ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:14:00 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.8ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:14:01 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/feed_cards/55" for ::1 at 2019-06-05 14:14:03 -0400
+Processing by FeedCardsController#destroy as HTML
+  Parameters: {"id"=>"55", "feed_card"=>{}}
+  [1m[36mFeedCard Load (0.2ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:43
+  [1m[36mFeedCard Destroy (0.2ms)[0m  [1m[31mDELETE FROM "feed_cards" WHERE "feed_cards"."id" = $1[0m  [["id", 55]]
+  ↳ app/controllers/feed_cards_controller.rb:43
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:43
+Completed 204 No Content in 3ms (ActiveRecord: 1.5ms)
+
+
+Started DELETE "/feed_cards/45" for ::1 at 2019-06-05 14:14:04 -0400
+Processing by FeedCardsController#destroy as HTML
+  Parameters: {"id"=>"45", "feed_card"=>{}}
+  [1m[36mFeedCard Load (0.2ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:43
+  [1m[36mFeedCard Destroy (0.3ms)[0m  [1m[31mDELETE FROM "feed_cards" WHERE "feed_cards"."id" = $1[0m  [["id", 45]]
+  ↳ app/controllers/feed_cards_controller.rb:43
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:43
+Completed 204 No Content in 11ms (ActiveRecord: 1.6ms)
+
+
+Started DELETE "/feed_cards/44" for ::1 at 2019-06-05 14:14:05 -0400
+Processing by FeedCardsController#destroy as HTML
+  Parameters: {"id"=>"44", "feed_card"=>{}}
+  [1m[36mFeedCard Load (1.0ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:43
+  [1m[36mFeedCard Destroy (0.3ms)[0m  [1m[31mDELETE FROM "feed_cards" WHERE "feed_cards"."id" = $1[0m  [["id", 44]]
+  ↳ app/controllers/feed_cards_controller.rb:43
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:43
+Completed 204 No Content in 6ms (ActiveRecord: 2.4ms)
+
+
+Started DELETE "/feed_cards/15" for ::1 at 2019-06-05 14:14:06 -0400
+Processing by FeedCardsController#destroy as HTML
+  Parameters: {"id"=>"15", "feed_card"=>{}}
+  [1m[36mFeedCard Load (0.2ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:43
+  [1m[36mFeedCard Destroy (0.2ms)[0m  [1m[31mDELETE FROM "feed_cards" WHERE "feed_cards"."id" = $1[0m  [["id", 15]]
+  ↳ app/controllers/feed_cards_controller.rb:43
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:43
+Completed 204 No Content in 3ms (ActiveRecord: 1.5ms)
+
+
+Started DELETE "/feed_cards/59" for ::1 at 2019-06-05 14:14:08 -0400
+Processing by FeedCardsController#destroy as HTML
+  Parameters: {"id"=>"59", "feed_card"=>{}}
+  [1m[36mFeedCard Load (0.2ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 59], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:43
+  [1m[36mFeedCard Destroy (0.2ms)[0m  [1m[31mDELETE FROM "feed_cards" WHERE "feed_cards"."id" = $1[0m  [["id", 59]]
+  ↳ app/controllers/feed_cards_controller.rb:43
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:43
+Completed 204 No Content in 3ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:14:12 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:14:12 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/feed_cards" for ::1 at 2019-06-05 14:14:23 -0400
+Processing by FeedCardsController#create as HTML
+  Parameters: {"img"=>"https://media.mnn.com/assets/images/2016/06/jupiter-nasa.jpg.638x0_q80_crop-smart.jpg", "title"=>"YOU ARE WITNESSING A FRONT THREE-QUARTER VIEW OF TWO ADULTS SHARING A TENDER MOMENT", "content"=>"I was walking out onto the football field before the superbowl", "subscribed"=>false, "likes"=>0, "user"=>"123", "user_id"=>1, "feed_card"=>{"img"=>"https://media.mnn.com/assets/images/2016/06/jupiter-nasa.jpg.638x0_q80_crop-smart.jpg", "title"=>"YOU ARE WITNESSING A FRONT THREE-QUARTER VIEW OF TWO ADULTS SHARING A TENDER MOMENT", "content"=>"I was walking out onto the football field before the superbowl", "subscribed"=>false, "likes"=>0, "user_id"=>1, "user"=>"123"}}
+Unpermitted parameter: :user
+Unpermitted parameter: :user
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[36mFeedCard Create (0.5ms)[0m  [1m[32mINSERT INTO "feed_cards" ("img", "title", "content", "likes", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["img", "https://media.mnn.com/assets/images/2016/06/jupiter-nasa.jpg.638x0_q80_crop-smart.jpg"], ["title", "YOU ARE WITNESSING A FRONT THREE-QUARTER VIEW OF TWO ADULTS SHARING A TENDER MOMENT"], ["content", "I was walking out onto the football field before the superbowl"], ["likes", 0], ["created_at", "2019-06-05 18:14:23.461060"], ["updated_at", "2019-06-05 18:14:23.461060"], ["user_id", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:25
+Completed 201 Created in 8ms (Views: 1.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:16:30 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:17:03 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:17:13 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.6ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:17:38 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.2ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:17:47 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.8ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:18:21 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.2ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:18:25 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:18:51 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:18:58 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:18:59 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.8ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:19:29 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.5ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:19:31 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (2.1ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/feed_cards" for ::1 at 2019-06-05 14:19:42 -0400
+Processing by FeedCardsController#create as HTML
+  Parameters: {"img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"123", "content"=>"123", "subscribed"=>false, "likes"=>0, "user"=>"david", "user_id"=>1, "feed_card"=>{"img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"123", "content"=>"123", "subscribed"=>false, "likes"=>0, "user_id"=>1, "user"=>"david"}}
+Unpermitted parameter: :user
+Unpermitted parameter: :user
+  [1m[35m (1.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[36mFeedCard Create (0.5ms)[0m  [1m[32mINSERT INTO "feed_cards" ("img", "title", "content", "likes", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["img", "http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600"], ["title", "123"], ["content", "123"], ["likes", 0], ["created_at", "2019-06-05 18:19:42.193005"], ["updated_at", "2019-06-05 18:19:42.193005"], ["user_id", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:25
+Completed 201 Created in 16ms (Views: 0.8ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:19:44 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:20:14 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:9
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/feed_cards" for ::1 at 2019-06-05 14:20:26 -0400
+Processing by FeedCardsController#create as HTML
+  Parameters: {"img"=>"", "title"=>"this is a test to see if the david user works", "content"=>"", "subscribed"=>false, "likes"=>0, "user"=>"david", "user_id"=>1, "feed_card"=>{"img"=>"", "title"=>"this is a test to see if the david user works", "content"=>"", "subscribed"=>false, "likes"=>0, "user_id"=>1, "user"=>"david"}}
+Unpermitted parameter: :user
+Unpermitted parameter: :user
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[36mFeedCard Create (1.1ms)[0m  [1m[32mINSERT INTO "feed_cards" ("img", "title", "content", "likes", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["img", ""], ["title", "this is a test to see if the david user works"], ["content", ""], ["likes", 0], ["created_at", "2019-06-05 18:20:26.727627"], ["updated_at", "2019-06-05 18:20:26.727627"], ["user_id", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:25
+Completed 201 Created in 7ms (Views: 0.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:23:23 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.5ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 55ms (Views: 0.1ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:23:34 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:26:53 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (1.1ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:26:55 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:26:57 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/feed_cards" for ::1 at 2019-06-05 14:27:05 -0400
+Processing by FeedCardsController#create as HTML
+  Parameters: {"img"=>"", "title"=>"", "content"=>"", "subscribed"=>false, "likes"=>0, "user"=>"david", "user_id"=>1, "feed_card"=>{"img"=>"", "title"=>"", "content"=>"", "subscribed"=>false, "likes"=>0, "user_id"=>1, "user"=>"david"}}
+Unpermitted parameter: :user
+Unpermitted parameter: :user
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[36mFeedCard Create (0.3ms)[0m  [1m[32mINSERT INTO "feed_cards" ("img", "title", "content", "likes", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["img", ""], ["title", ""], ["content", ""], ["likes", 0], ["created_at", "2019-06-05 18:27:05.467994"], ["updated_at", "2019-06-05 18:27:05.467994"], ["user_id", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:25
+Completed 201 Created in 5ms (Views: 0.4ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/feed_cards/62" for ::1 at 2019-06-05 14:27:16 -0400
+Processing by FeedCardsController#destroy as HTML
+  Parameters: {"id"=>"62", "feed_card"=>{}}
+  [1m[36mFeedCard Load (0.2ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 62], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:43
+  [1m[36mFeedCard Destroy (0.4ms)[0m  [1m[31mDELETE FROM "feed_cards" WHERE "feed_cards"."id" = $1[0m  [["id", 62]]
+  ↳ app/controllers/feed_cards_controller.rb:43
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:43
+Completed 204 No Content in 4ms (ActiveRecord: 1.7ms)
+
+
+Started DELETE "/feed_cards/63" for ::1 at 2019-06-05 14:27:17 -0400
+Processing by FeedCardsController#destroy as HTML
+  Parameters: {"id"=>"63", "feed_card"=>{}}
+  [1m[36mFeedCard Load (0.2ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 63], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:43
+  [1m[36mFeedCard Destroy (0.2ms)[0m  [1m[31mDELETE FROM "feed_cards" WHERE "feed_cards"."id" = $1[0m  [["id", 63]]
+  ↳ app/controllers/feed_cards_controller.rb:43
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:43
+Completed 204 No Content in 3ms (ActiveRecord: 1.5ms)
+
+
+Started DELETE "/feed_cards/61" for ::1 at 2019-06-05 14:27:17 -0400
+Processing by FeedCardsController#destroy as HTML
+  Parameters: {"id"=>"61", "feed_card"=>{}}
+  [1m[36mFeedCard Load (0.2ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 61], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:43
+  [1m[36mFeedCard Destroy (0.2ms)[0m  [1m[31mDELETE FROM "feed_cards" WHERE "feed_cards"."id" = $1[0m  [["id", 61]]
+  ↳ app/controllers/feed_cards_controller.rb:43
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:43
+Completed 204 No Content in 3ms (ActiveRecord: 1.5ms)
+
+
+Started DELETE "/feed_cards/60" for ::1 at 2019-06-05 14:27:19 -0400
+Processing by FeedCardsController#destroy as HTML
+  Parameters: {"id"=>"60", "feed_card"=>{}}
+  [1m[36mFeedCard Load (0.2ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:43
+  [1m[36mFeedCard Destroy (0.2ms)[0m  [1m[31mDELETE FROM "feed_cards" WHERE "feed_cards"."id" = $1[0m  [["id", 60]]
+  ↳ app/controllers/feed_cards_controller.rb:43
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:43
+Completed 204 No Content in 2ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:27:21 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/feed_cards" for ::1 at 2019-06-05 14:27:30 -0400
+Processing by FeedCardsController#create as HTML
+  Parameters: {"img"=>"https://media.mnn.com/assets/images/2016/06/jupiter-nasa.jpg.638x0_q80_crop-smart.jpg", "title"=>"123", "content"=>"123", "subscribed"=>false, "likes"=>0, "user"=>"david", "user_id"=>1, "feed_card"=>{"img"=>"https://media.mnn.com/assets/images/2016/06/jupiter-nasa.jpg.638x0_q80_crop-smart.jpg", "title"=>"123", "content"=>"123", "subscribed"=>false, "likes"=>0, "user_id"=>1, "user"=>"david"}}
+Unpermitted parameter: :user
+Unpermitted parameter: :user
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[36mFeedCard Create (0.7ms)[0m  [1m[32mINSERT INTO "feed_cards" ("img", "title", "content", "likes", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["img", "https://media.mnn.com/assets/images/2016/06/jupiter-nasa.jpg.638x0_q80_crop-smart.jpg"], ["title", "123"], ["content", "123"], ["likes", 0], ["created_at", "2019-06-05 18:27:30.138333"], ["updated_at", "2019-06-05 18:27:30.138333"], ["user_id", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:25
+Completed 201 Created in 6ms (Views: 0.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:28:32 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:29:54 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/feed_cards" for ::1 at 2019-06-05 14:29:57 -0400
+Processing by FeedCardsController#create as HTML
+  Parameters: {"img"=>"", "title"=>"", "content"=>"", "subscribed"=>false, "likes"=>0, "user"=>"david", "feed_card"=>{"img"=>"", "title"=>"", "content"=>"", "subscribed"=>false, "likes"=>0, "user"=>"david"}}
+Unpermitted parameter: :user
+Unpermitted parameter: :user
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[36mFeedCard Create (0.4ms)[0m  [1m[32mINSERT INTO "feed_cards" ("img", "title", "content", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["img", ""], ["title", ""], ["content", ""], ["likes", 0], ["created_at", "2019-06-05 18:29:57.636340"], ["updated_at", "2019-06-05 18:29:57.636340"]]
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:25
+Completed 201 Created in 5ms (Views: 0.6ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/feed_cards" for ::1 at 2019-06-05 14:31:46 -0400
+Processing by FeedCardsController#create as */*
+  Parameters: {"feed_card"=>{"img"=>"THis is test for user 3", "title"=>"videodrome", "content"=>"insdfisdnfiosn", "likes"=>"2", "user"=>"david", "subscribed"=>"false"}}
+Unpermitted parameter: :user
+Unpermitted parameter: :user
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[36mFeedCard Create (1.1ms)[0m  [1m[32mINSERT INTO "feed_cards" ("img", "title", "content", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["img", "THis is test for user 3"], ["title", "videodrome"], ["content", "insdfisdnfiosn"], ["likes", 2], ["created_at", "2019-06-05 18:31:46.612022"], ["updated_at", "2019-06-05 18:31:46.612022"]]
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:25
+Completed 201 Created in 8ms (Views: 0.5ms | ActiveRecord: 3.0ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6157864512930216870)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6157864512930216870)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started POST "/feed_cards" for ::1 at 2019-06-05 14:32:18 -0400
+Processing by FeedCardsController#create as */*
+  Parameters: {"feed_card"=>{"img"=>"THis is test for user 3", "title"=>"videodrome", "content"=>"insdfisdnfiosn", "likes"=>"2", "user"=>"david", "subscribed"=>"false"}}
+Unpermitted parameter: :user
+Unpermitted parameter: :user
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[36mFeedCard Create (0.6ms)[0m  [1m[32mINSERT INTO "feed_cards" ("img", "title", "content", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["img", "THis is test for user 3"], ["title", "videodrome"], ["content", "insdfisdnfiosn"], ["likes", 2], ["created_at", "2019-06-05 18:32:19.007892"], ["updated_at", "2019-06-05 18:32:19.007892"]]
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:25
+Completed 201 Created in 27ms (Views: 1.4ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/feed_cards" for ::1 at 2019-06-05 14:32:20 -0400
+Processing by FeedCardsController#create as */*
+  Parameters: {"feed_card"=>{"img"=>"THis is test for user 3", "title"=>"videodrome", "content"=>"insdfisdnfiosn", "likes"=>"2", "user"=>"david", "subscribed"=>"false"}}
+Unpermitted parameter: :user
+Unpermitted parameter: :user
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[36mFeedCard Create (0.3ms)[0m  [1m[32mINSERT INTO "feed_cards" ("img", "title", "content", "likes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["img", "THis is test for user 3"], ["title", "videodrome"], ["content", "insdfisdnfiosn"], ["likes", 2], ["created_at", "2019-06-05 18:32:20.539122"], ["updated_at", "2019-06-05 18:32:20.539122"]]
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:25
+Completed 201 Created in 4ms (Views: 0.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/feed_cards" for ::1 at 2019-06-05 14:32:52 -0400
+Processing by FeedCardsController#create as */*
+  Parameters: {"feed_card"=>{"img"=>"THis is test for user 3", "title"=>"videodrome", "content"=>"insdfisdnfiosn", "likes"=>"2", "user"=>"david", "subscribed"=>"false"}}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[36mFeedCard Create (0.9ms)[0m  [1m[32mINSERT INTO "feed_cards" ("img", "title", "content", "likes", "created_at", "updated_at", "user") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["img", "THis is test for user 3"], ["title", "videodrome"], ["content", "insdfisdnfiosn"], ["likes", 2], ["created_at", "2019-06-05 18:32:52.539226"], ["updated_at", "2019-06-05 18:32:52.539226"], ["user", "david"]]
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:25
+Completed 201 Created in 34ms (Views: 0.4ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:33:00 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "david":String):
+  
+app/controllers/feed_cards_controller.rb:9:in `index'
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:33:04 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "david":String):
+  
+app/controllers/feed_cards_controller.rb:9:in `index'
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:33:35 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (2.2ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 2.2ms)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "david":String):
+  
+app/controllers/feed_cards_controller.rb:9:in `index'
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:33:56 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "david":String):
+  
+app/controllers/feed_cards_controller.rb:9:in `index'
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:33:59 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "david":String):
+  
+app/controllers/feed_cards_controller.rb:9:in `index'
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:35:03 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.6ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.6ms)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "david":String):
+  
+app/controllers/feed_cards_controller.rb:9:in `index'
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:35:08 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.7ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "david":String):
+  
+app/controllers/feed_cards_controller.rb:9:in `index'
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:35:11 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.2ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "david":String):
+  
+app/controllers/feed_cards_controller.rb:9:in `index'
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:35:24 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/davidrada/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 3.8ms)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "david":String):
+  
+app/controllers/feed_cards_controller.rb:9:in `index'
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:35:25 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "david":String):
+  
+app/controllers/feed_cards_controller.rb:9:in `index'
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:35:54 -0400
+  
+SyntaxError (/Users/davidrada/Desktop/we-watch-api/app/controllers/feed_cards_controller.rb:3: syntax error, unexpected ',', expecting ']'
+...action :set_feed_card, only: [, :index, :show, :update, :des...
+...                              ^):
+  
+app/controllers/feed_cards_controller.rb:3: syntax error, unexpected ',', expecting ']'
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:35:55 -0400
+  
+SyntaxError (/Users/davidrada/Desktop/we-watch-api/app/controllers/feed_cards_controller.rb:3: syntax error, unexpected ',', expecting ']'
+...action :set_feed_card, only: [, :index, :show, :update, :des...
+...                              ^):
+  
+app/controllers/feed_cards_controller.rb:3: syntax error, unexpected ',', expecting ']'
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:35:56 -0400
+  
+SyntaxError (/Users/davidrada/Desktop/we-watch-api/app/controllers/feed_cards_controller.rb:3: syntax error, unexpected ',', expecting ']'
+...action :set_feed_card, only: [, :index, :show, :update, :des...
+...                              ^):
+  
+app/controllers/feed_cards_controller.rb:3: syntax error, unexpected ',', expecting ']'
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:36:22 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 21ms (Views: 2.3ms | ActiveRecord: 4.4ms)
+
+
+Started DELETE "/feed_cards/68" for ::1 at 2019-06-05 14:36:56 -0400
+Processing by FeedCardsController#destroy as HTML
+  Parameters: {"id"=>"68", "feed_card"=>{}}
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 68], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:43
+  [1m[36mFeedCard Destroy (0.3ms)[0m  [1m[31mDELETE FROM "feed_cards" WHERE "feed_cards"."id" = $1[0m  [["id", 68]]
+  ↳ app/controllers/feed_cards_controller.rb:43
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:43
+Completed 204 No Content in 10ms (ActiveRecord: 1.3ms)
+
+
+Started DELETE "/feed_cards/67" for ::1 at 2019-06-05 14:36:56 -0400
+Processing by FeedCardsController#destroy as HTML
+  Parameters: {"id"=>"67", "feed_card"=>{}}
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:43
+  [1m[36mFeedCard Destroy (0.2ms)[0m  [1m[31mDELETE FROM "feed_cards" WHERE "feed_cards"."id" = $1[0m  [["id", 67]]
+  ↳ app/controllers/feed_cards_controller.rb:43
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:43
+Completed 204 No Content in 3ms (ActiveRecord: 1.5ms)
+
+
+Started DELETE "/feed_cards/66" for ::1 at 2019-06-05 14:36:56 -0400
+Processing by FeedCardsController#destroy as HTML
+  Parameters: {"id"=>"66", "feed_card"=>{}}
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:43
+  [1m[36mFeedCard Destroy (0.2ms)[0m  [1m[31mDELETE FROM "feed_cards" WHERE "feed_cards"."id" = $1[0m  [["id", 66]]
+  ↳ app/controllers/feed_cards_controller.rb:43
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:43
+Completed 204 No Content in 3ms (ActiveRecord: 1.5ms)
+
+
+Started DELETE "/feed_cards/65" for ::1 at 2019-06-05 14:36:57 -0400
+Processing by FeedCardsController#destroy as HTML
+  Parameters: {"id"=>"65", "feed_card"=>{}}
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:43
+  [1m[36mFeedCard Destroy (0.2ms)[0m  [1m[31mDELETE FROM "feed_cards" WHERE "feed_cards"."id" = $1[0m  [["id", 65]]
+  ↳ app/controllers/feed_cards_controller.rb:43
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:43
+Completed 204 No Content in 3ms (ActiveRecord: 1.6ms)
+
+
+Started POST "/feed_cards" for ::1 at 2019-06-05 14:37:23 -0400
+Processing by FeedCardsController#create as HTML
+  Parameters: {"img"=>"https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/01/15/10/venus-williams.jpg", "title"=>"", "content"=>"", "subscribed"=>false, "likes"=>0, "user"=>"david", "feed_card"=>{"img"=>"https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/01/15/10/venus-williams.jpg", "title"=>"", "content"=>"", "subscribed"=>false, "likes"=>0, "user"=>"david"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[36mFeedCard Create (0.8ms)[0m  [1m[32mINSERT INTO "feed_cards" ("img", "title", "content", "likes", "created_at", "updated_at", "user") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["img", "https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/01/15/10/venus-williams.jpg"], ["title", ""], ["content", ""], ["likes", 0], ["created_at", "2019-06-05 18:37:23.030299"], ["updated_at", "2019-06-05 18:37:23.030299"], ["user", "david"]]
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:25
+Completed 201 Created in 12ms (Views: 0.6ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:37:25 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/feed_cards" for ::1 at 2019-06-05 14:37:33 -0400
+Processing by FeedCardsController#create as HTML
+  Parameters: {"img"=>"dasdasda", "title"=>"", "content"=>"", "subscribed"=>false, "likes"=>0, "user"=>"123", "feed_card"=>{"img"=>"dasdasda", "title"=>"", "content"=>"", "subscribed"=>false, "likes"=>0, "user"=>"123"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[36mFeedCard Create (0.6ms)[0m  [1m[32mINSERT INTO "feed_cards" ("img", "title", "content", "likes", "created_at", "updated_at", "user") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["img", "dasdasda"], ["title", ""], ["content", ""], ["likes", 0], ["created_at", "2019-06-05 18:37:33.261232"], ["updated_at", "2019-06-05 18:37:33.261232"], ["user", "123"]]
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:25
+Completed 201 Created in 5ms (Views: 0.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:41:16 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:41:29 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:41:51 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:42:14 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.8ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:42:35 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:43:19 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:43:24 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:43:50 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:43:54 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:44:00 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (3.6ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:44:29 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.5ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:44:51 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.7ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:44:57 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:45:07 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:45:19 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:45:26 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:45:31 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:45:36 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:45:44 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:45:48 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:45:52 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.5ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:45:57 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:46:01 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.5ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:46:04 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/feed_cards" for ::1 at 2019-06-05 14:46:31 -0400
+Processing by FeedCardsController#create as HTML
+  Parameters: {"img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"YOU ARE WITNESSING A FRONT THREE-QUARTER VIEW OF TWO ADULTS SHARING A TENDER MOMENT", "content"=>"rounded, velvety, hazelnut, peach, tomato", "subscribed"=>false, "likes"=>"34", "user"=>"david", "feed_card"=>{"img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"YOU ARE WITNESSING A FRONT THREE-QUARTER VIEW OF TWO ADULTS SHARING A TENDER MOMENT", "content"=>"rounded, velvety, hazelnut, peach, tomato", "subscribed"=>false, "likes"=>"34", "user"=>"david"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[36mFeedCard Create (0.4ms)[0m  [1m[32mINSERT INTO "feed_cards" ("img", "title", "content", "likes", "created_at", "updated_at", "user") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["img", "http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600"], ["title", "YOU ARE WITNESSING A FRONT THREE-QUARTER VIEW OF TWO ADULTS SHARING A TENDER MOMENT"], ["content", "rounded, velvety, hazelnut, peach, tomato"], ["likes", 34], ["created_at", "2019-06-05 18:46:31.296047"], ["updated_at", "2019-06-05 18:46:31.296047"], ["user", "david"]]
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:25
+Completed 201 Created in 4ms (Views: 0.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:46:36 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/feed_cards" for ::1 at 2019-06-05 14:46:45 -0400
+Processing by FeedCardsController#create as HTML
+  Parameters: {"img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"", "content"=>"asdasd", "subscribed"=>false, "likes"=>0, "user"=>"admin", "feed_card"=>{"img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"", "content"=>"asdasd", "subscribed"=>false, "likes"=>0, "user"=>"admin"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[36mFeedCard Create (0.3ms)[0m  [1m[32mINSERT INTO "feed_cards" ("img", "title", "content", "likes", "created_at", "updated_at", "user") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["img", "http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600"], ["title", ""], ["content", "asdasd"], ["likes", 0], ["created_at", "2019-06-05 18:46:45.629008"], ["updated_at", "2019-06-05 18:46:45.629008"], ["user", "admin"]]
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:25
+Completed 201 Created in 3ms (Views: 0.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:46:47 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.2ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:46:49 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:52:18 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:52:21 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:52:21 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.8ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:53:38 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:54:04 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:54:35 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:54:43 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/feed_cards" for ::1 at 2019-06-05 14:55:03 -0400
+Processing by FeedCardsController#create as HTML
+  Parameters: {"img"=>"https://www.universetoday.com/wp-content/uploads/2014/09/sun1.jpg", "title"=>"", "content"=>"", "subscribed"=>false, "likes"=>0, "user"=>"123", "feed_card"=>{"img"=>"https://www.universetoday.com/wp-content/uploads/2014/09/sun1.jpg", "title"=>"", "content"=>"", "subscribed"=>false, "likes"=>0, "user"=>"123"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[36mFeedCard Create (0.4ms)[0m  [1m[32mINSERT INTO "feed_cards" ("img", "title", "content", "likes", "created_at", "updated_at", "user") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["img", "https://www.universetoday.com/wp-content/uploads/2014/09/sun1.jpg"], ["title", ""], ["content", ""], ["likes", 0], ["created_at", "2019-06-05 18:55:03.735948"], ["updated_at", "2019-06-05 18:55:03.735948"], ["user", "123"]]
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:25
+Completed 201 Created in 7ms (Views: 0.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:56:11 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:56:17 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.5ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:56:20 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.2ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:56:33 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:56:34 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:57:12 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:57:15 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:57:54 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.2ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:58:08 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:58:20 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/feed_cards" for ::1 at 2019-06-05 14:58:26 -0400
+Processing by FeedCardsController#create as HTML
+  Parameters: {"img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"asdas  sfafasd", "content"=>"", "subscribed"=>false, "likes"=>0, "user"=>"123", "feed_card"=>{"img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"asdas  sfafasd", "content"=>"", "subscribed"=>false, "likes"=>0, "user"=>"123"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[36mFeedCard Create (0.4ms)[0m  [1m[32mINSERT INTO "feed_cards" ("img", "title", "content", "likes", "created_at", "updated_at", "user") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["img", "http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600"], ["title", "asdas  sfafasd"], ["content", ""], ["likes", 0], ["created_at", "2019-06-05 18:58:26.300403"], ["updated_at", "2019-06-05 18:58:26.300403"], ["user", "123"]]
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:25
+Completed 201 Created in 6ms (Views: 0.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:58:28 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.5ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/feed_cards" for ::1 at 2019-06-05 14:58:37 -0400
+Processing by FeedCardsController#create as HTML
+  Parameters: {"img"=>"https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/01/15/10/venus-williams.jpg", "title"=>"YOU ARE WITNESSING A FRONT THREE-QUARTER VIEW OF TWO ADULTS SHARING A TENDER MOMENT", "content"=>"", "subscribed"=>false, "likes"=>0, "user"=>"123", "feed_card"=>{"img"=>"https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/01/15/10/venus-williams.jpg", "title"=>"YOU ARE WITNESSING A FRONT THREE-QUARTER VIEW OF TWO ADULTS SHARING A TENDER MOMENT", "content"=>"", "subscribed"=>false, "likes"=>0, "user"=>"123"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[36mFeedCard Create (0.3ms)[0m  [1m[32mINSERT INTO "feed_cards" ("img", "title", "content", "likes", "created_at", "updated_at", "user") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["img", "https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/01/15/10/venus-williams.jpg"], ["title", "YOU ARE WITNESSING A FRONT THREE-QUARTER VIEW OF TWO ADULTS SHARING A TENDER MOMENT"], ["content", ""], ["likes", 0], ["created_at", "2019-06-05 18:58:37.736358"], ["updated_at", "2019-06-05 18:58:37.736358"], ["user", "123"]]
+  ↳ app/controllers/feed_cards_controller.rb:25
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:25
+Completed 201 Created in 4ms (Views: 0.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:58:39 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:58:40 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 14:58:42 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:02:54 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:02:57 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/api/feed_cards/undefined" for ::1 at 2019-06-05 15:03:03 -0400
+  
+ActionController::RoutingError (No route matches [PUT] "/api/feed_cards/undefined"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:03:28 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.7ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:03:30 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:03:50 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/feed_cards/undefined" for ::1 at 2019-06-05 15:03:56 -0400
+Processing by FeedCardsController#update as HTML
+  Parameters: {"img"=>"https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/01/15/10/venus-williams.jpg", "title"=>"123", "content"=>"", "subscribed"=>false, "likes"=>0, "user"=>"", "id"=>"undefined", "feed_card"=>{"img"=>"https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/01/15/10/venus-williams.jpg", "title"=>"123", "content"=>"", "subscribed"=>false, "likes"=>0, "user"=>""}}
+  [1m[36mFeedCard Load (0.5ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+Completed 404 Not Found in 2ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find FeedCard with 'id'=undefined):
+  
+app/controllers/feed_cards_controller.rb:49:in `set_feed_card'
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:04:16 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.2ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:04:25 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:04:33 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/feed_cards/76" for ::1 at 2019-06-05 15:04:38 -0400
+Processing by FeedCardsController#update as HTML
+  Parameters: {"img"=>"https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/01/15/10/venus-williams.jpg", "title"=>"123", "content"=>"", "subscribed"=>false, "likes"=>0, "user"=>"", "id"=>"76", "feed_card"=>{"id"=>"76", "img"=>"https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/01/15/10/venus-williams.jpg", "title"=>"123", "content"=>"", "subscribed"=>false, "likes"=>0, "user"=>""}}
+  [1m[36mFeedCard Load (0.6ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+Unpermitted parameter: :id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[36mFeedCard Update (1.9ms)[0m  [1m[33mUPDATE "feed_cards" SET "title" = $1, "user" = $2, "updated_at" = $3 WHERE "feed_cards"."id" = $4[0m  [["title", "123"], ["user", ""], ["updated_at", "2019-06-05 19:04:38.021309"], ["id", 76]]
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+Completed 200 OK in 11ms (Views: 0.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:04:56 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:04:56 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/feed_cards/75" for ::1 at 2019-06-05 15:05:04 -0400
+Processing by FeedCardsController#update as HTML
+  Parameters: {"img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>0, "user"=>"", "id"=>"75", "feed_card"=>{"id"=>"75", "img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>0, "user"=>""}}
+  [1m[36mFeedCard Load (3.0ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+Unpermitted parameter: :id
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[36mFeedCard Update (0.9ms)[0m  [1m[33mUPDATE "feed_cards" SET "title" = $1, "user" = $2, "updated_at" = $3 WHERE "feed_cards"."id" = $4[0m  [["title", "Here is a planet"], ["user", ""], ["updated_at", "2019-06-05 19:05:04.054831"], ["id", 75]]
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+Completed 200 OK in 10ms (Views: 0.7ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:05:06 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:05:33 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:05:50 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.2ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:05:54 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.7ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 6ms (Views: 1.8ms | ActiveRecord: 0.7ms)
+
+
+Started PUT "/feed_cards/75" for ::1 at 2019-06-05 15:05:58 -0400
+Processing by FeedCardsController#update as HTML
+  Parameters: {"img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"34", "user"=>"", "id"=>"75", "feed_card"=>{"id"=>"75", "img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"34", "user"=>""}}
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+Unpermitted parameter: :id
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[36mFeedCard Update (0.4ms)[0m  [1m[33mUPDATE "feed_cards" SET "likes" = $1, "updated_at" = $2 WHERE "feed_cards"."id" = $3[0m  [["likes", 34], ["updated_at", "2019-06-05 19:05:58.978141"], ["id", 75]]
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:06:24 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:06:24 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.7ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.7ms)
+
+
+Started PUT "/feed_cards/75" for ::1 at 2019-06-05 15:06:27 -0400
+Processing by FeedCardsController#update as HTML
+  Parameters: {"img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"123", "user"=>"", "id"=>"75", "feed_card"=>{"id"=>"75", "img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"123", "user"=>""}}
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[36mFeedCard Update (0.7ms)[0m  [1m[33mUPDATE "feed_cards" SET "likes" = $1, "updated_at" = $2 WHERE "feed_cards"."id" = $3[0m  [["likes", 123], ["updated_at", "2019-06-05 19:06:27.460306"], ["id", 75]]
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:06:29 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/feed_cards/75" for ::1 at 2019-06-05 15:27:45 -0400
+Processing by FeedCardsController#update as HTML
+  Parameters: {"img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"34", "user"=>"", "id"=>"75", "feed_card"=>{"id"=>"75", "img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"34", "user"=>""}}
+  [1m[36mFeedCard Load (3.9ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+Unpermitted parameter: :id
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[36mFeedCard Update (1.4ms)[0m  [1m[33mUPDATE "feed_cards" SET "likes" = $1, "updated_at" = $2 WHERE "feed_cards"."id" = $3[0m  [["likes", 34], ["updated_at", "2019-06-05 19:27:45.498838"], ["id", 75]]
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+Completed 200 OK in 19ms (Views: 0.4ms | ActiveRecord: 12.6ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:28:10 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:28:23 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/feed_cards/75" for ::1 at 2019-06-05 15:28:26 -0400
+Processing by FeedCardsController#update as HTML
+  Parameters: {"img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"345", "user"=>"", "id"=>"75", "feed_card"=>{"id"=>"75", "img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"345", "user"=>""}}
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[36mFeedCard Update (0.7ms)[0m  [1m[33mUPDATE "feed_cards" SET "likes" = $1, "updated_at" = $2 WHERE "feed_cards"."id" = $3[0m  [["likes", 345], ["updated_at", "2019-06-05 19:28:26.808953"], ["id", 75]]
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+Completed 200 OK in 8ms (Views: 0.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:28:56 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:29:05 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/feed_cards/75" for ::1 at 2019-06-05 15:29:09 -0400
+Processing by FeedCardsController#update as HTML
+  Parameters: {"img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"234", "user"=>"", "id"=>"75", "feed_card"=>{"id"=>"75", "img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"234", "user"=>""}}
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+Unpermitted parameter: :id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[36mFeedCard Update (0.4ms)[0m  [1m[33mUPDATE "feed_cards" SET "likes" = $1, "updated_at" = $2 WHERE "feed_cards"."id" = $3[0m  [["likes", 234], ["updated_at", "2019-06-05 19:29:09.702186"], ["id", 75]]
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:29:12 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:29:25 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:29:28 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/feed_cards/75" for ::1 at 2019-06-05 15:29:31 -0400
+Processing by FeedCardsController#update as HTML
+  Parameters: {"img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"45", "user"=>"", "id"=>"75", "feed_card"=>{"id"=>"75", "img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"45", "user"=>""}}
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+Unpermitted parameter: :id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[36mFeedCard Update (0.5ms)[0m  [1m[33mUPDATE "feed_cards" SET "likes" = $1, "updated_at" = $2 WHERE "feed_cards"."id" = $3[0m  [["likes", 45], ["updated_at", "2019-06-05 19:29:31.774428"], ["id", 75]]
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:29:33 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:29:41 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:29:52 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:29:54 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/feed_cards/75" for ::1 at 2019-06-05 15:30:00 -0400
+Processing by FeedCardsController#update as HTML
+  Parameters: {"img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"65", "user"=>"", "id"=>"75", "feed_card"=>{"id"=>"75", "img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"65", "user"=>""}}
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+Unpermitted parameter: :id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[36mFeedCard Update (0.5ms)[0m  [1m[33mUPDATE "feed_cards" SET "likes" = $1, "updated_at" = $2 WHERE "feed_cards"."id" = $3[0m  [["likes", 65], ["updated_at", "2019-06-05 19:30:00.941969"], ["id", 75]]
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:30:02 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.5ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.5ms)
+
+
+Started PUT "/feed_cards/75" for ::1 at 2019-06-05 15:30:06 -0400
+Processing by FeedCardsController#update as HTML
+  Parameters: {"img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"2", "user"=>"", "id"=>"75", "feed_card"=>{"id"=>"75", "img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"2", "user"=>""}}
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+Unpermitted parameter: :id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[36mFeedCard Update (0.4ms)[0m  [1m[33mUPDATE "feed_cards" SET "likes" = $1, "updated_at" = $2 WHERE "feed_cards"."id" = $3[0m  [["likes", 2], ["updated_at", "2019-06-05 19:30:06.759266"], ["id", 75]]
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:30:20 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/feed_cards/75" for ::1 at 2019-06-05 15:30:25 -0400
+Processing by FeedCardsController#update as HTML
+  Parameters: {"img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"1", "user"=>"", "id"=>"75", "feed_card"=>{"id"=>"75", "img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"1", "user"=>""}}
+  [1m[36mFeedCard Load (0.2ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[36mFeedCard Update (0.4ms)[0m  [1m[33mUPDATE "feed_cards" SET "likes" = $1, "updated_at" = $2 WHERE "feed_cards"."id" = $3[0m  [["likes", 1], ["updated_at", "2019-06-05 19:30:25.137824"], ["id", 75]]
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:31:01 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:31:23 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:31:24 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:31:28 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:31:31 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (1.2ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 1.2ms)
+
+
+Started PUT "/feed_cards/75" for ::1 at 2019-06-05 15:31:38 -0400
+Processing by FeedCardsController#update as HTML
+  Parameters: {"img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"", "user"=>"", "id"=>"75", "feed_card"=>{"id"=>"75", "img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"", "user"=>""}}
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+Unpermitted parameter: :id
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[36mFeedCard Update (0.5ms)[0m  [1m[33mUPDATE "feed_cards" SET "likes" = $1, "updated_at" = $2 WHERE "feed_cards"."id" = $3[0m  [["likes", nil], ["updated_at", "2019-06-05 19:31:38.634346"], ["id", 75]]
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:31:42 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/feed_cards/75" for ::1 at 2019-06-05 15:31:45 -0400
+Processing by FeedCardsController#update as HTML
+  Parameters: {"img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"2", "user"=>"", "id"=>"75", "feed_card"=>{"id"=>"75", "img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"2", "user"=>""}}
+  [1m[36mFeedCard Load (0.5ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+Unpermitted parameter: :id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[36mFeedCard Update (0.4ms)[0m  [1m[33mUPDATE "feed_cards" SET "likes" = $1, "updated_at" = $2 WHERE "feed_cards"."id" = $3[0m  [["likes", 2], ["updated_at", "2019-06-05 19:31:45.977797"], ["id", 75]]
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+Completed 200 OK in 7ms (Views: 0.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:31:47 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/feed_cards/75" for ::1 at 2019-06-05 15:31:50 -0400
+Processing by FeedCardsController#update as HTML
+  Parameters: {"img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>2, "user"=>"", "id"=>"75", "feed_card"=>{"id"=>"75", "img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>2, "user"=>""}}
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+Unpermitted parameter: :id
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:32:11 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.2ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:32:12 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:32:17 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/feed_cards/75" for ::1 at 2019-06-05 15:32:19 -0400
+Processing by FeedCardsController#update as HTML
+  Parameters: {"img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"", "user"=>"", "id"=>"75", "feed_card"=>{"id"=>"75", "img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"", "user"=>""}}
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+Unpermitted parameter: :id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[36mFeedCard Update (0.7ms)[0m  [1m[33mUPDATE "feed_cards" SET "likes" = $1, "updated_at" = $2 WHERE "feed_cards"."id" = $3[0m  [["likes", nil], ["updated_at", "2019-06-05 19:32:19.901634"], ["id", 75]]
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+Completed 200 OK in 7ms (Views: 0.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:33:03 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/feed_cards/75" for ::1 at 2019-06-05 15:33:07 -0400
+Processing by FeedCardsController#update as HTML
+  Parameters: {"img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"3", "user"=>"", "id"=>"75", "feed_card"=>{"id"=>"75", "img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"3", "user"=>""}}
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+Unpermitted parameter: :id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[36mFeedCard Update (0.4ms)[0m  [1m[33mUPDATE "feed_cards" SET "likes" = $1, "updated_at" = $2 WHERE "feed_cards"."id" = $3[0m  [["likes", 3], ["updated_at", "2019-06-05 19:33:07.600058"], ["id", 75]]
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:33:09 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:33:16 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.2ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:33:33 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/feed_cards/75" for ::1 at 2019-06-05 15:33:37 -0400
+Processing by FeedCardsController#update as HTML
+  Parameters: {"img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"32", "user"=>"", "id"=>"75", "feed_card"=>{"id"=>"75", "img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"32", "user"=>""}}
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[36mFeedCard Update (0.4ms)[0m  [1m[33mUPDATE "feed_cards" SET "likes" = $1, "updated_at" = $2 WHERE "feed_cards"."id" = $3[0m  [["likes", 32], ["updated_at", "2019-06-05 19:33:37.287369"], ["id", 75]]
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:33:38 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.2ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:33:50 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.2ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/feed_cards/75" for ::1 at 2019-06-05 15:33:53 -0400
+Processing by FeedCardsController#update as HTML
+  Parameters: {"img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"323", "user"=>"", "id"=>"75", "feed_card"=>{"id"=>"75", "img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"323", "user"=>""}}
+  [1m[36mFeedCard Load (0.2ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+Unpermitted parameter: :id
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[36mFeedCard Update (0.5ms)[0m  [1m[33mUPDATE "feed_cards" SET "likes" = $1, "updated_at" = $2 WHERE "feed_cards"."id" = $3[0m  [["likes", 323], ["updated_at", "2019-06-05 19:33:53.183633"], ["id", 75]]
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:33:54 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:34:07 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:34:21 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:34:23 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.2ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:34:30 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/feed_cards/75" for ::1 at 2019-06-05 15:34:33 -0400
+Processing by FeedCardsController#update as HTML
+  Parameters: {"img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"3", "user"=>"", "id"=>"75", "feed_card"=>{"id"=>"75", "img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"3", "user"=>""}}
+  [1m[36mFeedCard Load (0.2ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+Unpermitted parameter: :id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[36mFeedCard Update (1.0ms)[0m  [1m[33mUPDATE "feed_cards" SET "likes" = $1, "updated_at" = $2 WHERE "feed_cards"."id" = $3[0m  [["likes", 3], ["updated_at", "2019-06-05 19:34:33.306862"], ["id", 75]]
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:35:25 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.5ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:35:40 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:35:41 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.2ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:35:54 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.2ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:35:57 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.5ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+
+
+Started PUT "/feed_cards/75" for ::1 at 2019-06-05 15:35:59 -0400
+Processing by FeedCardsController#update as HTML
+  Parameters: {"img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"33", "user"=>"", "id"=>"75", "feed_card"=>{"id"=>"75", "img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"33", "user"=>""}}
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[36mFeedCard Update (0.4ms)[0m  [1m[33mUPDATE "feed_cards" SET "likes" = $1, "updated_at" = $2 WHERE "feed_cards"."id" = $3[0m  [["likes", 33], ["updated_at", "2019-06-05 19:35:59.734285"], ["id", 75]]
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:36:16 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/feed_cards/75" for ::1 at 2019-06-05 15:36:20 -0400
+Processing by FeedCardsController#update as HTML
+  Parameters: {"img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"333", "user"=>"", "id"=>"75", "feed_card"=>{"id"=>"75", "img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"333", "user"=>""}}
+  [1m[36mFeedCard Load (0.6ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+Unpermitted parameter: :id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[36mFeedCard Update (0.4ms)[0m  [1m[33mUPDATE "feed_cards" SET "likes" = $1, "updated_at" = $2 WHERE "feed_cards"."id" = $3[0m  [["likes", 333], ["updated_at", "2019-06-05 19:36:20.899261"], ["id", 75]]
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:36:24 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.8ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:36:37 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.2ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/feed_cards/75" for ::1 at 2019-06-05 15:36:39 -0400
+Processing by FeedCardsController#update as HTML
+  Parameters: {"img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"3333", "user"=>"", "id"=>"75", "feed_card"=>{"id"=>"75", "img"=>"http://www.astronomy.com/-/media/Images/News%20and%20Observing/News/2018/03/spectra_mercury.jpg?mw=600", "title"=>"Here is a planet", "content"=>"", "subscribed"=>false, "likes"=>"3333", "user"=>""}}
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[36mFeedCard Update (0.4ms)[0m  [1m[33mUPDATE "feed_cards" SET "likes" = $1, "updated_at" = $2 WHERE "feed_cards"."id" = $3[0m  [["likes", 3333], ["updated_at", "2019-06-05 19:36:39.893729"], ["id", 75]]
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+Completed 200 OK in 7ms (Views: 0.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:36:41 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/feed_cards/76" for ::1 at 2019-06-05 15:36:47 -0400
+Processing by FeedCardsController#update as HTML
+  Parameters: {"img"=>"https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/01/15/10/venus-williams.jpg", "title"=>"123", "content"=>"", "subscribed"=>false, "likes"=>"2", "user"=>"", "id"=>"76", "feed_card"=>{"id"=>"76", "img"=>"https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/01/15/10/venus-williams.jpg", "title"=>"123", "content"=>"", "subscribed"=>false, "likes"=>"2", "user"=>""}}
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+Unpermitted parameter: :id
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[36mFeedCard Update (1.5ms)[0m  [1m[33mUPDATE "feed_cards" SET "likes" = $1, "updated_at" = $2 WHERE "feed_cards"."id" = $3[0m  [["likes", 2], ["updated_at", "2019-06-05 19:36:47.652141"], ["id", 76]]
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:36:59 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.4ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/feed_cards/76" for ::1 at 2019-06-05 15:37:03 -0400
+Processing by FeedCardsController#update as HTML
+  Parameters: {"img"=>"https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/01/15/10/venus-williams.jpg", "title"=>"123", "content"=>"", "subscribed"=>false, "likes"=>"23", "user"=>"", "id"=>"76", "feed_card"=>{"id"=>"76", "img"=>"https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/01/15/10/venus-williams.jpg", "title"=>"123", "content"=>"", "subscribed"=>false, "likes"=>"23", "user"=>""}}
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT  "feed_cards".* FROM "feed_cards" WHERE "feed_cards"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/feed_cards_controller.rb:49
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[36mFeedCard Update (0.3ms)[0m  [1m[33mUPDATE "feed_cards" SET "likes" = $1, "updated_at" = $2 WHERE "feed_cards"."id" = $3[0m  [["likes", 23], ["updated_at", "2019-06-05 19:37:03.602168"], ["id", 76]]
+  ↳ app/controllers/feed_cards_controller.rb:34
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/feed_cards_controller.rb:34
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:37:04 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.3ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/feed_cards" for ::1 at 2019-06-05 15:42:27 -0400
+Processing by FeedCardsController#index as */*
+  [1m[36mFeedCard Load (0.9ms)[0m  [1m[34mSELECT "feed_cards".* FROM "feed_cards"[0m
+  ↳ app/controllers/feed_cards_controller.rb:7
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.9ms)
+
+
