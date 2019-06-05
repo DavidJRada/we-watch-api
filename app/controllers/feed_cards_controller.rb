@@ -1,5 +1,5 @@
 class FeedCardsController < ApplicationController
-  before_action :authenticate_user
+  # before_action :authenticate_user
   before_action :set_feed_card, only: [:show, :update, :destroy]
 
   # GET /feed_cards
