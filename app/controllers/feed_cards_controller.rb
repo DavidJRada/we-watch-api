@@ -1,12 +1,12 @@
 class FeedCardsController < ApplicationController
-  before_action :authenticate_user
+  # before_action :authenticate_user
   before_action :set_feed_card, only: [:show, :update, :destroy]
 
   # GET /feed_cards
   def index
     @feed_cards = FeedCard.all.reverse
 
-    render json: @feed_cards.to_json(include: :user)
+    render json: @feed_cards
     
   end
 
@@ -51,6 +51,6 @@ class FeedCardsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def feed_card_params
-      params.require(:feed_card).permit(:img, :title, :content, :subscribed, :likes, :user_id)
+      params.require(:feed_card).permit(:img, :title, :content, :subscribed, :likes, :user, :id)
     end
 end
