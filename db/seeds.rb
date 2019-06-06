@@ -24,10 +24,21 @@
 # user.save
 
 
-user = User.new
-user.username = '3'
-user.email = '3'
-user.password = '123'
-user.password_confirmation = '123'
-user.admin = true
-user.save
+# user = User.new
+# user.username = '3'
+# user.email = '3'
+# user.password = '123'
+# user.password_confirmation = '123'
+# user.admin = true
+# user.save
+
+20.times do
+    FeedCard.create(
+        img: "https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/ghostbusters-billmurray-radio.jpg",
+        title: Faker::Coffee.notes,
+        content: Faker::Books::Lovecraft.sentences(2),
+        likes: Random.rand(1...10),
+        user_id: 1,
+        user: Faker::Movies::Ghostbusters.character
+    )
+end
