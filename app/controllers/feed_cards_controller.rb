@@ -51,6 +51,6 @@ class FeedCardsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def feed_card_params
-      params.require(:feed_card).permit(:img, :title, :content, :subscribed, :likes, :user, :id)
+      params.require(:feed_card).permit(:img, :title, :content, :subscribed, :likes, :user, :id, :moviePoster, :movieTitle, :movieDirector, :movieYear, :moviePlot)
     end
 end
