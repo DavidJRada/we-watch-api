@@ -32,13 +32,23 @@
 # user.admin = true
 # user.save
 
-20.times do
-    FeedCard.create(
-        img: "https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/ghostbusters-billmurray-radio.jpg",
-        title: Faker::Coffee.notes,
-        content: Faker::Books::Lovecraft.sentences(2),
-        likes: Random.rand(1...10),
-        user_id: 1,
-        user: Faker::Movies::Ghostbusters.character
-    )
-end
+profImages = [
+    'https://media2.fdncms.com/charleston/imager/u/original/6195134/billmurray_164235155_gettyimages.jpg',
+
+]
+
+
+FeedCard.create(
+    img: "https://media2.fdncms.com/charleston/imager/u/original/6195134/billmurray_164235155_gettyimages.jpg",
+    title: 'My favorite movie I was in!',
+    user: 'Trill Murray',
+    content: 'The number one movie I was ever in. ',
+    likes: Random.rand(1...80),
+    user_id: 1,
+    subscribed: true,
+    movieTitle: 'Groundhog Day',
+    movieDirector: 'Harold Ramis',
+    movieYear: '1993',
+    moviePlot: 'A weatherman finds himself inexplicably living the same day over and over again.',
+    moviePoster: 'https://m.media-amazon.com/images/M/MV5BZWIxNzM5YzQtY2FmMS00Yjc3LWI1ZjUtNGVjMjMzZTIxZTIxXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg'
+)
